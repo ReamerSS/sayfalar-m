@@ -125,3 +125,74 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+/* Mobil uyumlu ayarları */
+@media (max-width: 768px) {
+    /* Video-container boyutunu küçültme */
+    .video-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Romantik çerçeve içeriğini daha küçük yapmak */
+    .romantik-cerceve .icerik {
+        padding: 20px;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    /* Başlık boyutunu küçültme */
+    h1 {
+        font-size: 28px;
+    }
+
+    /* Paragraf boyutunu küçültme */
+    p {
+        font-size: 16px;
+    }
+
+    /* Tablo boyutunu küçültme */
+    table {
+        font-size: 14px;
+    }
+
+    /* Tablo hücre içi padding'i azaltma */
+    th, td {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Video-container boyutunu mobilde optimize etme */
+    .video-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Romantik çerçeve içeriğini çok daha küçük yapmak */
+    .romantik-cerceve .icerik {
+        padding: 15px;
+        width: 95%;
+        max-width: 95%;
+    }
+
+    /* Başlık boyutunu daha da küçültme */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Paragraf boyutunu daha da küçültme */
+    p {
+        font-size: 14px;
+    }
+
+    /* Tablo font boyutunu küçültme */
+    table {
+        font-size: 12px;
+    }
+
+    /* Tablo hücre içi padding'i çok daha küçültme */
+    th, td {
+        padding: 8px;
+    }
+}
