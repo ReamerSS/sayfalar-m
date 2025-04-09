@@ -8,31 +8,38 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('arka1.jpg');  /* Arka plan resmini buraya ekledik */
+    background-image: url('arka1.jpg');  /* Arka plan resmi */
     background-size: cover;  /* Resmin tüm ekranı kaplamasını sağlıyoruz */
     background-position: center;  /* Resmi ortalıyoruz */
     background-repeat: no-repeat;  /* Resmin tekrar etmesini engelliyoruz */
+    flex-direction: column; /* İçeriği dikeyde hizalamak */
 }
 
 /* Ana Konteyner */
 .container {
     text-align: center;
     z-index: 1; /* Diğer öğelerin üstünde yer alacak */
+    width: 100%; /* Konteynerin genişliği %100 */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Resim Konteyneri */
 .image-container {
     position: relative;
     display: inline-block;
+    width: 100%;  /* Resim konteyneri genişliğini %100 yapıyoruz */
+    margin-bottom: 20px;
 }
 
 /* Zehram Resmi için Şık Dış Çerçeve */
 .big-image {
-    max-width: 80%;
-    height: auto;
-    border: 10px solid #fff; /* Şık beyaz çerçeve */
+    width: 100%; /* Resmin genişliğini %100 yapıyoruz, böylece ekran boyutuna uyumlu olur */
+    max-width: 80%; /* Maksimum genişlik %80 olacak */
+    height: auto; /* Yüksekliği otomatik ayarlayacak */
+    border: 10px solid #fff; /* Beyaz çerçeve */
     border-radius: 20px; /* Yuvarlak köşeler */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Hafif gölge ile derinlik */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Hafif gölge */
 }
 
 /* Üstteki Metin */
@@ -54,6 +61,7 @@ body {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap; /* Butonların satırlara sarmasını sağlıyoruz */
 }
 
 .btn {
@@ -94,18 +102,12 @@ body {
     margin-top: 30px;
 }
 
-/* Sadece zehram.jpg için özel boyutlandırma */
-.big-image[src="zehram.jpg"] {
-    max-width: 50%;  /* Sadece bu resmin genişliğini küçült */
-    max-height: 400px; /* Maksimum yükseklik belirle */
-}
-
 /* Sağ alt köşeye ok işareti yerleştirme */
 .arrow-link {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font-size: 60px;  /* Ok işaretini büyütmek için font-size değerini artırdım */
+    font-size: 60px;
     color: #fff;
     text-decoration: none;
     background-color: transparent;
@@ -113,9 +115,8 @@ body {
     z-index: 999; /* Diğer öğelerin üstünde görünmesini sağlar */
 }
 
-/* Ok işaretine fareyle gelindiğinde renk değişikliği */
 .arrow-link:hover {
-    color: #f00; /* Ok işaretine fareyle gelindiğinde kırmızı olur */
+    color: #f00;
 }
 
 /* Mobil uyumlu ayarlar */
@@ -128,7 +129,7 @@ body {
     }
 
     .big-image {
-        max-width: 100%; /* Mobilde resmin genişliğini tam ekran yap */
+        max-width: 90%; /* Resmin genişliğini %90 yapıyoruz */
         border: 5px solid #fff; /* Daha ince çerçeve */
     }
 
@@ -160,6 +161,10 @@ body {
 /* Çok küçük ekranlar (telefonlar) */
 @media (max-width: 480px) {
     /* Daha fazla küçültme */
+    body {
+        padding: 10px;
+    }
+
     .big-image {
         max-width: 100%;  /* Resim ekranı tamamen kaplasın */
     }
