@@ -1,0 +1,127 @@
+/* Genel sayfa stili */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent; /* Arka planı şeffaf yapıyoruz */
+    overflow: hidden; /* Sayfa kaydırmasını engelliyoruz */
+}
+
+/* video-container'ın ekranı tamamen kaplamasını sağlıyoruz */
+.video-container {
+    position: fixed; /* Sayfa kaydırılsa bile video sabit kalacak */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* İçeriğin altında görünmesini sağlıyoruz */
+    overflow: hidden;
+}
+
+/* Video stilini belirliyoruz */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Videonun ekranı düzgün kaplamasını sağlar */
+}
+
+/* Romantik çerçeve stili */
+.romantik-cerceve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ekranın tamamını kapla */
+    position: relative; /* İçeriği video ile doğru konumlandırabilmek için */
+}
+
+/* İçeriğin stilini düzenliyoruz */
+.romantik-cerceve .icerik {
+    padding: 40px;
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8); /* Hafif şeffaf beyaz arka plan */
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 5px solid rgba(255, 128, 171, 0.6); /* Soluk pembe tonunda romantik çerçeve */
+    position: relative;
+    z-index: 1; /* Video ile karışmaması için içerik üstte olacak */
+}
+
+/* Tablo stili */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* Tablo arka planına daha fazla şeffaflık ekledim */
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Georgia', serif; /* Romantik bir yazı tipi */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+}
+
+th {
+    background-color: rgba(255, 128, 171, 0.6); /* Şeffaf pembe tonunda başlık arka planı */
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+td {
+    background-color: rgba(252, 228, 236, 0.6); /* Şeffaf hafif pembe tonunda hücre arka planı */
+    color: #333;
+    border: 1px solid rgba(248, 187, 208, 0.6); /* Çok ince pembe kenarlık */
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(241, 248, 233, 0.6); /* Şeffaf yumuşak pastel yeşil tonları */
+}
+
+tr:hover {
+    background-color: rgba(248, 187, 208, 0.6); /* Şeffaf pembe tonunda hover efekti */
+}
+
+table th, table td {
+    border: 1px solid rgba(248, 187, 208, 0.6); /* Tablo kenarlıkları çok ince pembe */
+}
+
+/* Çerçeve efektleri */
+.romantik-cerceve .icerik:before,
+.romantik-cerceve .icerik:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(255, 128, 171, 0.4); /* Soluk pembe tonunda */
+    left: 0;
+}
+
+.romantik-cerceve .icerik:before {
+    top: -15px; /* Üst kısımda yer alacak */
+}
+
+.romantik-cerceve .icerik:after {
+    bottom: -15px; /* Alt kısımda yer alacak */
+}
+
+/* Başlık stili */
+h1 {
+    font-size: 36px;
+    color: rgba(216, 27, 96, 0.7); /* Koyu pembe başlık rengi, daha soluk */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+/* Paragraf stili */
+p {
+    font-size: 18px;
+    color: #333; /* Koyu gri metin rengi */
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
