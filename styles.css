@@ -117,3 +117,63 @@ body {
 .arrow-link:hover {
     color: #f00; /* Ok işaretine fareyle gelindiğinde kırmızı olur */
 }
+
+/* Mobil uyumlu ayarlar */
+@media (max-width: 768px) {
+    /* Genel düzenleme */
+    body {
+        height: auto;
+        padding: 20px;
+        background-size: contain;  /* Mobilde daha küçük boyutta arka plan */
+    }
+
+    .big-image {
+        max-width: 100%; /* Mobilde resmin genişliğini tam ekran yap */
+        border: 5px solid #fff; /* Daha ince çerçeve */
+    }
+
+    .text-overlay {
+        font-size: 24px; /* Metin boyutunu küçült */
+    }
+
+    .center-text {
+        font-size: 30px; /* Başlık boyutunu küçült */
+    }
+
+    .buttons {
+        flex-direction: column; /* Butonları dikey hizala */
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 30px; /* Buton yazı boyutunu küçült */
+        padding: 8px 16px; /* Buton boyutunu küçült */
+    }
+
+    .arrow-link {
+        font-size: 50px; /* Ok işaretini küçült */
+        bottom: 10px;  /* Ok işaretinin konumunu biraz yukarı çek */
+        right: 10px;  /* Ok işaretinin konumunu biraz sola çek */
+    }
+}
+
+/* Çok küçük ekranlar (telefonlar) */
+@media (max-width: 480px) {
+    /* Daha fazla küçültme */
+    .big-image {
+        max-width: 100%;  /* Resim ekranı tamamen kaplasın */
+    }
+
+    .text-overlay {
+        font-size: 18px; /* Daha küçük metin */
+    }
+
+    .center-text {
+        font-size: 24px; /* Başlık boyutunu küçült */
+    }
+
+    .btn {
+        font-size: 24px; /* Buton yazı boyutunu daha da küçült */
+        padding: 6px 12px; /* Buton boyutunu daha da küçült */
+    }
+}
