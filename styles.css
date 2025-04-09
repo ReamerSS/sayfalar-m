@@ -18,20 +18,17 @@ body {
 .container {
     text-align: center;
     z-index: 1; /* Diğer öğelerin üstünde yer alacak */
-    width: 100%;  /* Container genişliğini %100 yapıyoruz */
-    padding: 20px;
 }
 
 /* Resim Konteyneri */
 .image-container {
     position: relative;
     display: inline-block;
-    max-width: 100%; /* Mobilde %100 genişlik */
 }
 
 /* Zehram Resmi için Şık Dış Çerçeve */
 .big-image {
-    max-width: 80%; /* Resmin genişliğini %80 yapıyoruz */
+    max-width: 80%;
     height: auto;
     border: 10px solid #fff; /* Şık beyaz çerçeve */
     border-radius: 20px; /* Yuvarlak köşeler */
@@ -57,7 +54,6 @@ body {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap; /* Mobilde butonların satırlara sarmasını sağlar */
 }
 
 .btn {
@@ -98,6 +94,12 @@ body {
     margin-top: 30px;
 }
 
+/* Sadece zehram.jpg için özel boyutlandırma */
+.big-image[src="zehram.jpg"] {
+    max-width: 50%;  /* Sadece bu resmin genişliğini küçült */
+    max-height: 400px; /* Maksimum yükseklik belirle */
+}
+
 /* Sağ alt köşeye ok işareti yerleştirme */
 .arrow-link {
     position: fixed;
@@ -126,7 +128,7 @@ body {
     }
 
     .big-image {
-        max-width: 90%; /* Mobilde resmin genişliğini %90 yap */
+        max-width: 100%; /* Mobilde resmin genişliğini tam ekran yap */
         border: 5px solid #fff; /* Daha ince çerçeve */
     }
 
@@ -173,12 +175,5 @@ body {
     .btn {
         font-size: 24px; /* Buton yazı boyutunu daha da küçült */
         padding: 6px 12px; /* Buton boyutunu daha da küçült */
-    }
-
-    /* Ok işaretinin boyutunu küçültüyoruz */
-    .arrow-link {
-        font-size: 40px;
-        bottom: 5px;
-        right: 5px;
     }
 }
